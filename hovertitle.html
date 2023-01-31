@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.container{
+            position: absolute;
+            top:20%;
+            left:30%;
+            width: 500px; ;
+            height: 200px; ;
+            transition:.4s ease-in-out;
+        }
+
+</style>
+</head>
+<body>
+
+    <h2>Image Overlay Title</h2>
+    <p>Hover over the image to see the effect.</p>
+    
+    <div class="container">
+      <img src="https://silveroakuni.ac.in/upload/Celebrity%20at%20SOU/1-(17).jpg" alt="Avatar" class="image">
+      <div class="overlay"> this is silveroakuni</div>
+    </div>
+     
+</body>
+</html>

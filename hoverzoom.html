@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* Container needed to position the overlay. Adjust the width as needed. */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+ /* Make the image to responsive. */ 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*The overlay effect (full height and width) - lays on top of the container and over the image.*/ 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display*/
+.container:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/*  Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container{
+            position: absolute;
+            top:20%;
+            left:30%;
+            width: 500px; ;
+            height: 335px; ;
+            transition:.4s ease-in-out;
+        }
+
+</style>
+</head>
+<body>
+
+<h2>Image Hover Fullscreen Zoom</h2>
+<p>Hover over the image to see the zoom effect.</p>
+
+<div class="container">
+  <img src="https://silveroakuni.ac.in/upload/Celebrity%20at%20SOU/1-(10).jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text"><a href="https://silveroakuni.ac.in/"> this is silveroakuni </a> </div>
+  </div>
+</div>
+
+</body>
+</html>
